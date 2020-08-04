@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+</head>
+<body>
+<h1 th:text="${title}"></h1>
+<ul>
+    <li><a th:href="@{/params/string(text='This param')}">/params/string?text=This Param</a></li>
+    <li><a th:href="@{/params/string(text='This Another Param')}">/params/string?text=This Another Param</a></li>
+    <li><a th:href="@{/params/mix-params(text='This Another Param', number=3)}">/params/mix-params?text=This Another Param&number=3</a></li>
+</ul>
+</body>
+</html>
